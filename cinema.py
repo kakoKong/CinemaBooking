@@ -4,6 +4,11 @@ class User:
     def __init__(self, name, userid):
         self.name = name
         self.userid = userid
+    def add2data(self):
+        all_users.append(self.name)
+        all_users.append(self.userid)
+        
+
 class Cinema:
     def __init__(self, name, capacity, cinemaid):
         self.name = name
@@ -28,7 +33,7 @@ command = input("What do you want to do: ")
 if command == "CU":
     name = input("Input your name: ")
     user = User(name, userid)
-    all_users.append(user)
+    user.add2data
     userid+1
 elif command == "CC":
     name = input("Input Cinema Name: ")
@@ -42,8 +47,8 @@ elif command == "CC":
     cinemaid+1
 
 with open("cinema.csv", "a", newline='') as csvfile:
-    writer = csv.writer(csvfile)
-    writer.writerow(all_users)
+        writer = csv.writer(csvfile)
+        writer.writerow(all_users)
 with open("cinema.csv", "a", newline='') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(all_cinema)
