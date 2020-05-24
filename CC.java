@@ -1,12 +1,14 @@
 public class CC {
+    //name of the cinema
     private String cinemaname;
+    //total capacity
     private int cinemaCap;
-    private int cinemaID = 0;
+    //available space
+    private int bookingid;
 
     public CC(String cinemaname, int cinemaCap){
         this.cinemaname = cinemaname;
         this.cinemaCap = cinemaCap;
-        cinemaID++;
     }
 
     public int getcap(){
@@ -15,7 +17,5 @@ public class CC {
     public String getName(){
         return cinemaname;
     }
-    public int getID(){
-        return cinemaID;
-    }
+
 }
